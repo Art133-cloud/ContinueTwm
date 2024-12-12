@@ -1,0 +1,282 @@
+.parentLeftAccount {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    .contentLeftAccount {
+        display: flex;
+        flex-direction: column;
+        row-gap: 45px;
+        img {
+            user-select: none;
+        }
+        .userContent {
+            box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+            background: #fff;
+            border-radius: 10px;
+            max-width: 300px;
+            width: 100%;
+            height: 303px;
+            padding: 26px 73px 0 10px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            .userContentItem {
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                cursor: pointer;
+                p {
+                    font-family: var(--font-family);
+                    font-weight: 500;
+                    font-size: 16px;
+                    letter-spacing: 0.04em;
+                    color: rgba(0, 0, 0, 0.6);
+                }
+            }
+        }
+        .userRequest {
+            border-radius: 15px;
+            max-width: 300px;
+            width: 100%;
+            padding: 26px 0 24px 0;
+            box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.05);
+            background: #fff;
+            .usersBlock {
+                height: 350px;
+                overflow-y: scroll;
+                scrollbar-width: none; 
+                -ms-overflow-style: none;  
+                ::-webkit-scrollbar {
+                    display: none;
+                }
+                .user {
+                    padding: 25px 0 0 24px;
+                    .btnsUser {
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding-top: 16px;
+                    }
+                    .userInfo {
+                        display: flex;
+                        align-items: center;
+                        gap: 16px;
+                        .aboutUser {
+                            h2 {
+                                font-family: var(--second-family);
+                                font-weight: 700;
+                                font-size: 12px;
+                                line-height: 120%;
+                                color: #212529;
+                            }
+                            p {
+                                font-family: var(--second-family);
+                                font-weight: 500;
+                                font-size: 12px;
+                                line-height: 140%;
+                                color: #adb5bd;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .titleRequest {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px 27px 24px;
+            border-bottom: 1px solid #f1f1f1;
+            h2 {
+                font-family: var(--second-family);
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 120%;
+                color: #212529;
+            }
+            p {
+                font-family: var(--second-family);
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 175%;
+                background: linear-gradient(180deg, #0575e6 0%, #031c7a 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                cursor: pointer;
+            }
+        }
+        .suggestGroup {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.05);
+            background: #fff;
+            padding: 26px 0px 71px 0px;
+            .contentSuggestGroup {
+                padding-top: 25px;
+                position: relative;
+                .suggestGroupBigImage {
+                    padding-left: 24px;
+                }
+                .applyUsers {
+                    width: 217px;
+                    position: absolute;
+                    padding-top: 12px;
+                    left: 24px;
+                        img {
+                            position: absolute;
+                            &:first-child {
+                                left: 0;
+                                z-index: 0;
+                            }
+                            &:nth-child(2) {
+                                left: 17px;
+                                z-index: 1;
+                            }
+                            &:nth-child(3) {
+                                left: 36px;
+                                z-index: 2;
+                            }
+                            &:nth-child(4) {
+                                left: 55px;
+                                z-index: 3;
+                            }
+                        }
+                    .more {
+                        border-radius: 30px;
+                        width: 35px;
+                        height: 35px;
+                        display: flex;
+                        background: #f5f5f5;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        left: 75px;
+                        z-index: 4;
+                        p {
+                            font-family: var(--second-family);
+                            font-weight: 600;
+                            font-size: 12px;
+                            line-height: 292%;
+                            letter-spacing: 0.08em;
+                            text-align: center;
+                            color: #adb5bd;
+                        }
+                    }
+                    h4 {
+                        position: absolute;
+                        right: 10px;
+                        top: 20px;
+                        font-family: var(--second-family);
+                        font-weight: 600;
+                        font-size: 12px;
+                        line-height: 175%;
+                        color: #adb5bd;
+                        z-index: 5;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 2660px) {
+    .parentLeftAccount {
+        .contentLeftAccount {
+            row-gap: 15px;
+            .userRequest {
+                .usersBlock {
+                    height: 250px;
+                }
+            }
+            .titleRequest {
+                padding: 0 24px 10px 24px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 2100px) {
+    .parentLeftAccount {
+        .contentLeftAccount {
+           .suggestGroup {
+            .contentSuggestGroup {
+                padding-top: 10px;
+                .suggestGroupBigImage {
+                    img {
+                        width: 250px;
+                        height: 100px;
+                        object-fit: cover;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1840px) {
+    .parentLeftAccount {
+        .contentLeftAccount {
+            .userRequest {
+                .usersBlock {
+                    height: 150px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1840px) {
+    .parentLeftAccount {
+        .contentLeftAccount {
+            .userRequest {
+                .usersBlock {
+                    height: 150px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1700px) {
+    .parentLeftAccount {
+        .contentLeftAccount {
+            .userContent {
+                height: 203px;
+            }
+        }
+    } 
+}
+@media only screen and (max-width: 1513px) {
+    .parentLeftAccount {
+        .contentLeftAccount {
+            .userContent {
+                padding: 26px 33px 0 10px;
+                height: 153px;
+            }
+            .suggestGroup {
+                padding: 10px 5px 60px 5px;
+                .contentSuggestGroup {
+                    .suggestGroupBigImage {
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1320px) {
+    .parentLeftAccount {
+        .contentLeftAccount {
+            .userContent {
+                padding: 10px 33px 0 10px;
+            }
+            .userRequest {
+                padding: 10px 0;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .parentLeftAccount {
+        display: none;
+    }
+}

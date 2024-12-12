@@ -1,0 +1,156 @@
+.parentRightAccount {
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    .contentRightAccount {
+        box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.05);
+        background: #fff;
+        border-radius: 15px;
+        max-width: 300px;
+        width: 300px;
+        padding: 24px 16px 24px 24px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+        max-height: 834px;
+        h2 {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 10px;
+            line-height: 120%;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #adb5bd;
+            padding-bottom: 8px;
+        }
+        h4 {
+            font-family: var(--font-family);
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 120%;
+            color: #6c757d;
+        }
+        .userAndName {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .contact {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .contacts {
+            .users {
+                display: flex;
+                flex-direction: column;
+                row-gap: 16px;
+            }
+        }
+        .icon {
+            border-radius: 160px;
+            width: 22px;
+            height: 20px;
+            background: #1e74fd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                font-family: var(--second-family);
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 100%;
+                text-align: center;
+                color: #fff;
+            }
+        }
+        .iconOnline {
+            border-radius: 8px;
+            width: 8px;
+            height: 8px;
+            background: #10d876;
+        }
+        .iconOfline {
+            border-radius: 8px;
+            width: 8px;
+            height: 8px;
+            background: #fe9431;
+        }
+        .lastOnline {
+            margin-right: 20px;
+            p {
+                font-family: var(--font-family);
+                font-weight: 700;
+                font-size: 10px;
+                line-height: 100%;
+                text-align: center;
+                color: #adb5bd;
+            }
+        }
+        .firstGroup {
+            background: linear-gradient(135deg, #05f 0%, #09f 100%);
+        }
+        .secondGroup {
+            background: linear-gradient(90deg, #f2994a 0%, #f2c94c 100%);            
+        }
+        .thirdGroup {
+            background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);            
+        }
+        .groupAvatar {
+            border-radius: 35px;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            p {
+                font-family: var(--second-family);
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 292%;
+                letter-spacing: 0.08em;
+                text-align: center;
+                color: #fff;
+            }
+        }
+        .groups,.pages {
+            .userAndName {
+                h4 {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1620px) {
+        .contentRightAccount {
+            row-gap: 5px;
+            .contacts {
+                .users {
+                    row-gap: 5px;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 1460px) {
+        .contentRightAccount {
+            row-gap: 5px;
+            .groupAvatar {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    @media only screen and (max-width: 1300px) {
+        .contentRightAccount {
+                max-height: 590px;
+                overflow-y: auto;
+                row-gap: 16px;
+                scrollbar-width: thin;
+                scrollbar-color: #f1f1f1 #f1f1f100;
+        }
+    }
+    @media only screen and (max-width: 1200px) {
+        display: none;
+    }
+}

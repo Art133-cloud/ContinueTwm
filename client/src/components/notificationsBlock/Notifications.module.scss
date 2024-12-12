@@ -1,0 +1,382 @@
+.parentNotificationsBlock { 
+    display: flex;
+    flex-direction: column;
+    max-width: 1407px;
+    width: 100%;
+    .selected {
+        border: 2px solid #0070f3;
+      }
+      
+      .deleteButton {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        background-color: #ff4d4f;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      .deleteButton:hover {
+        background-color: #ff7875;
+      }
+      
+      .checkMark {
+        width: 8px;
+        height: 8px;
+        background: #0070f3;
+        border-radius: 5px;
+        position: absolute;
+        right: 2.1px;
+        top: 15%;
+      }
+      .topActions {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+      }
+      
+      .deleteButton,
+      .unreadButton,
+      .blockButton {
+        padding: 5px 10px;
+        border: none;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+
+      }
+      
+      .deleteButton {
+        background-color: #dc3545;
+      }
+      
+      .unreadButton {
+        background-color: #28a745;
+      }
+      
+      .blockButton {
+        background-color: #ffc107;
+      }
+      
+      .unread {
+        font-weight: bold;
+        color: #007bff;
+      }
+      
+      .blocked {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+    .contentNotificationsBlock {
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        width: 1407px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        ::-webkit-scrollbar {
+            display: none; 
+        }
+    
+        .itemNotification {
+            img {
+                user-select: none;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1407px;
+            width: 100%;
+            border-radius: 5px;
+            padding: 13px 15px 13px 20px;
+    
+            .firstBlockNotifications {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                max-width: 187px;
+                width: 100%;
+                h4 {
+                    font-family: var(--second-family);
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 120%;
+                    color: #212529;
+                }
+                .avatarWithSymbol {
+                    border-radius: 35px;
+                    width: 35px;
+                    height: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: red;
+                    p {
+                        font-family: var(--second-family);
+                        font-weight: 700;
+                        font-size: 12px;
+                        letter-spacing: 0.08em;
+                        text-align: center;
+                        color: #fff;
+                    }
+                }
+                .onlineIcon, .oflineIcon, .blackIcon {
+                    border-radius: 8px;
+                    width: 8px;
+                    height: 8px;
+                }
+                .onlineIcon {
+                    background: #10d876;
+                }
+                .oflineIcon {
+                    background: #fe9431;            
+                }
+                .blackIcon {
+                    background: #343a40;
+                }
+                .checkBox {
+                    border: 1px solid rgba(0, 0, 0, 0.25);
+                    border-radius: 4px;
+                    width: 16px;
+                    height: 16px;
+                    background: #fff;
+                    margin-right: 10px;
+                    position: relative;
+                }
+            }
+            .secondBlockNotifications {
+                display: flex;
+                align-items: center;
+                gap: 13px;
+                h2 {
+                    font-family: var(--second-family);
+                    font-weight: 600;
+                    font-size: 12px;
+                    line-height: 175%;
+                    color: #212529;
+                }
+            }
+            p {
+                font-family: var(--second-family);
+                font-weight: 600;
+                font-size: 12px;
+                line-height: 175%;
+                color: #adb5bd;
+            }
+        }
+    }
+    
+}
+@media only screen and (max-width: 1936px) {
+    .parentNotificationsBlock {
+
+    }
+}
+@media only screen and (max-width: 1326px) {
+    .contentNotificationsBlock {
+        padding: 10px;
+    }
+
+    .itemNotification {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        
+        .firstBlockNotifications {
+            flex-direction: row;
+            gap: 5px;
+            h4 {
+                font-size: 10px;
+                line-height: 16px;
+            }
+
+            .avatarWithSymbol {
+                width: 30px;
+                height: 30px;
+                p {
+                    font-size: 10px;
+                }
+            }
+        }
+
+        .secondBlockNotifications {
+            display: block;
+            gap: 5px;
+            h2 {
+                font-size: 10px;
+            }
+        }
+
+        p {
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .itemNotification {
+
+        .secondBlockNotifications {
+            flex-direction: column;
+            gap: 5px;
+            h2 {
+                font-size: 10px;
+            }
+        }
+
+        p {
+            font-size: 10px;
+            line-height: 14px;
+        }
+    }
+}
+
+// const initialItems = generateItems([
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#e8f1fa",
+//       text: "Hurin Seary",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.blackIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.oflineIcon,
+//       avatar: (
+//         <div className={styles.avatarWithSymbol}        >
+//           <p>V</p>
+//         </div>
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <div className={styles.avatarWithSymbol}        >
+//           <p>V</p>
+//         </div>
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <Image src={FirstUser.src} alt="FirstUser" width={35} height={35} />
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//     {
+//       icon: styles.onlineIcon,
+//       avatar: (
+//         <div className={styles.avatarWithSymbol}        >
+//           <p>V</p>
+//         </div>
+//       ),
+//       background: "#fff",
+//       text: "Victor Exrixon",
+//     },
+//   ]);
